@@ -16,7 +16,8 @@ RUN apt-get install -y --no-install-recommends\
         python-setuptools \
         python-ldap \
         libffi-dev \
-        libssl-dev
+        libssl-dev \
+        lsof
 
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
@@ -24,7 +25,7 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN pip install --upgrade pip
 RUN pip install -r /opt/oictest/requirements.txt
 
-RUN git clone https://github.com/rohe/oictest /opt/oictest/src/oictest
+RUN git clone https://github.com/mokemokechicken/oictest.git /opt/oictest/src/oictest
 RUN pip install -e /opt/oictest/src/oictest
 
 ADD start.sh /start.sh
