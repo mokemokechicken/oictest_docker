@@ -25,3 +25,11 @@ OPRP_SSL_MODULE = "sslconf"
 OPRP_TEST_FLOW = "tflow"
 
 CONFIG_MAX_NUMBER_OF_CHARS_ALLOWED = 10000
+
+CLIENT = {
+    # loose way
+    'allow': {
+        "issuer_mismatch": True,
+        "no_https_issuer": True,
+    },
+}

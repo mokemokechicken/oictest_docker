@@ -60,5 +60,7 @@ fi
 
 
 cd /opt/oictest/src/oictest/test/oic_op/config_server/
+git fetch
+git checkout origin/master
 ./start.sh
 
